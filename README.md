@@ -70,3 +70,38 @@ int main()
 ```
 
 ![polymorphism](https://github.com/SeokLeeUS/PolymorphismDemo/raw/master/_images/polymorphism.png)
+
+
+c. another example 
+```cpp
+#include <iostream>
+
+class Base
+{
+public:
+    virtual void BeginPlay() const
+    {
+        std::cout << "Base::BeginPlay called\n";
+    }
+};
+
+class Derived : public Base
+{
+    using Super = Base;
+public:
+    void BeginPlay() const override
+    {
+        Super::BeginPlay(); //comment out this line to see difference
+        std::cout << "Derived::BeginPlay called\n";
+    }
+};
+
+int main()
+{
+    Derived D;
+    D.BeginPlay();
+}
+
+```
+
+
