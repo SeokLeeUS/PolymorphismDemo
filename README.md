@@ -3,7 +3,7 @@
 demo for polymorphism in C++
 
 a. overloading:
-```
+```cpp
 //overloading
 int GetSize(int x)
 {
@@ -18,7 +18,7 @@ int GetSize(std::string x)
 ```
 
 b. runtime polymorphism:
-```
+```cpp
 //runtime polymorphism
 
 class Animal
